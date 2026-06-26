@@ -28,8 +28,14 @@
 		</p>
 	</header>
 	<p>
+		A <strong>speaker encoder</strong> is a technique in <strong>speaker recognition</strong>.
+	</p>
+	<p>
 		A <strong>speaker encoder</strong> is a function that takes a (usually human) voice as input, and outputs a vector — called the <a href="/speaker-embedding/">speaker embedding</a> — that <em>characterizes</em> or <em>identifies</em> the speaker.
-		In general, this <strong>speaker embedding</strong> is expected to be unique to each speaker.
+		In general, this <strong>speaker embedding</strong> is expected to be unique'ish for each speaker.
+	</p>
+	<p>
+		More precisely, a <strong>speaker encoder</strong> maps variable-length speech into a fixed-length vector where the <strong>speaker embeddings</strong> from voice samples from the same speaker are close together and different speakers are far apart.
 	</p>
 	<p>
 		A <strong>speaker embedding</strong> tends to contain information about the speaker's
@@ -41,7 +47,7 @@
 			Some things that <strong>speaker encoders</strong> are used for includes:
 		</p>
 		<dl>
-			<dt>Speaker Diarization</dt>
+			<dt>speaker diarization</dt>
 			<dd>
 			</dd>
 
@@ -61,19 +67,83 @@
 		</dl>
 	</section>
 	<section>
+		<h1>Reading List</h1>
+		<dl>
+			<dt>Contrastive Loss (2005 March)</dt>
+			<dd>
+				<a href="http://lecun.com/exdb/publis/pdf/hadsell-chopra-lecun-06.pdf">Dimensionality Reduction by Learning an Invariant Mapping</a>
+			</dd>
+
+			<dt>FaceNet (2015 March)</dt>
+			<dd>
+				<a href="https://arxiv.org/abs/1503.03832">FaceNet: A Unified Embedding for Face Recognition and Clustering</a>
+				<details>
+					<summary>notes</summary>
+					<p>
+						This paper introduced a number of ideas that later appeared in speaker recognition:
+					</p>
+					<ul>
+						<li>
+							embedding spaces
+						</li>
+						<li>
+							triplet loss
+						</li>
+						<li>
+							cosine similarity
+						</li>
+						<li>
+							verification instead of classification
+						</li>
+					</ul>
+					<p>
+						Although obviously, these techniques existed before this before.
+						But, because of the similarity, it acts as a nice introduction.
+					</p>
+				</details>
+			</dd>
+
+			<dd>
+				<dt>Angular Loss (2017 August)</dt>
+				<dd>
+					<a href="https://arxiv.org/abs/1708.01682">Deep Metric Learning with Angular Loss</a>
+				</dd>
+			</dd>
+
+			<dd>
+				<dt>CosFace (2017 August)</dt>
+				<dd>
+					<a href="https://arxiv.org/abs/1801.09414">CosFace: Large Margin Cosine Loss for Deep Face Recognition</a>
+				</dd>
+			</dd>
+
+			<dd>
+				<dt>ArcFace (2018 January)</dt>
+				<dd>
+					<a href="https://arxiv.org/abs/1801.07698">ArcFace: Additive Angular Margin Loss for Deep Face Recognition</a>
+				</dd>
+			</dd>
+
+			<dt>2025 December</dt>
+			<dd>
+				<a href="https://arxiv.org/abs/2512.18286">What Does the Speaker Embedding Encode?</a>
+			</dd>
+		</dl>
+	</section>
+	<section>
 		<h1>See Also</h1>
 		<ul>
 			<li>
-				<a href="/cocktail-party-effect/">Cocktail Party Effect</a>
-			</li>
-			<li>
-				<a href="/log-mel-spectrogram/">Log-Mel Spectrogram</a>
-			</li>
-			<li>
-				<a href="/mel-spectrogram/">Mel Spectrogram</a>
+				<a href="/speaker-diarization/">Speaker Diarization</a>
 			</li>
 			<li>
 				<a href="/speaker-embedding/">Speaker Embedding</a>
+			</li>
+			<li>
+				<a href="/speaker-identification/">Speaker Identification</a>
+			</li>
+			<li>
+				<a href="/speaker-verification/">Speaker Verification</a>
 			</li>
 			<li>
 				<a href="/voice-cloning/">Voice Cloning</a>
