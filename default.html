@@ -42,6 +42,32 @@
 		pitch, texture, tone, etc.
 	</p>
 	<section>
+		<h1>Big Picture</h1>
+		<p>
+			THe big picture is:
+		</p>
+		<figure>
+			<pre>
+          audio
+            ↓
+artificial neural network
+            ↓
+   256-dimensional vector
+			</pre>
+		</figure>
+		<p>
+			The objective of the training is <em>not</em> to produce a "correct" speaker ID directly (like in many instance of supervised learning), but instead the objective is to organize the embedding space such that:
+		</p>
+		<ul>
+			<li>
+				speech samples from the same speaker cluster together
+			</li>
+			<li>
+				speech samples from different speakers are well separated
+			</li>
+		</ul>
+	</section>
+	<section>
 		<h1>Usage</h1>
 		<p>
 			Some things that <strong>speaker encoders</strong> are used for includes:
@@ -104,6 +130,13 @@
 			</dd>
 
 			<dd>
+				<dt>2019 August</dt>
+				<dd>
+					<a href="https://www.mdpi.com/2073-8994/11/9/1066">Deep Metric Learning: A Survey</a>
+				</dd>
+			</dd>
+
+			<dd>
 				<dt>Angular Loss (2017 August)</dt>
 				<dd>
 					<a href="https://arxiv.org/abs/1708.01682">Deep Metric Learning with Angular Loss</a>
@@ -127,6 +160,19 @@
 			<dt>2025 December</dt>
 			<dd>
 				<a href="https://arxiv.org/abs/2512.18286">What Does the Speaker Embedding Encode?</a>
+			</dd>
+
+			<dt>2017 June</dt>
+			<dd>
+				<a href="https://arxiv.org/abs/1706.07567">Sampling Matters in Deep Embedding Learning</a>
+				<details>
+					<summary>notes<summary>
+					<ul>
+						<li>
+							how you choose positive and negative examples during training can matter as much as the loss function itself.
+						</li>
+					</ul>
+				</details>
 			</dd>
 		</dl>
 	</section>
